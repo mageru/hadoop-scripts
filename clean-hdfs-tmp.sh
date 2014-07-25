@@ -51,7 +51,7 @@ while [ $COUNTER -lt $END ]; do
 		LINEEND=$END
 	fi
 		
-	FILES=$(sed -n "${COUNTER},${LINEEND}p" /tmp//files_to_delete | awk '
+	FILES=$(sed -n "${COUNTER},${LINEEND}p" /tmp/files_to_delete | awk '
 	{ 
 		for (i=1; i<=NF; i++)  {
 			a[NR,i] = $i
